@@ -1,4 +1,9 @@
 # CarND-SearchProgram
+## Overview
+The porject is to find the path from the init position to the goal position. It contains the following steps:
+* 
+
+<img src="https://user-images.githubusercontent.com/40875720/51436129-f408e400-1cc1-11e9-8d6c-ddd772736108.PNG" width="600">
 
 ```
 # Define a function, search() that returns a list
@@ -33,9 +38,7 @@ delta = [[-1, 0], # go up
 delta_name = ['^', '<', 'v', '>']
 
 def search(grid,init,goal,cost):
-    # ----------------------------------------
-    # insert code here
-    # ----------------------------------------
+
     #Init the varialbles will be used
     closed = [[0 for row in range(len(grid[0]))] for col in range(len(grid[1]))]
     closed[init[0]][init[1]] = 1
@@ -45,12 +48,6 @@ def search(grid,init,goal,cost):
     open = [[g,x,y]]
     found = False
     resign = False
-    
-    print(len(grid))
-    print(len(grid[0]))
-    print(len(grid[1]))
-    print(len(grid[2]))
-    print(closed)
     
     while found is False and resign is False:
         if (len(open) == 0):
@@ -77,11 +74,6 @@ def search(grid,init,goal,cost):
                             g2 = g + cost
                             open.append([g2,x2,y2])
                             closed[x2][y2] = 1
-    
-    #Step 1: A step furture to find the next successor, add G value
-    #Step 2: Mark the occupied space
-    #Step 3: Check if it is the goal
-    #return path
 
 search(grid,init,goal,cost)
 ```
