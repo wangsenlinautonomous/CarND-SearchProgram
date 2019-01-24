@@ -5,6 +5,7 @@ The porject is to find the path from the init position to the goal position. It 
 
 <img src="https://user-images.githubusercontent.com/40875720/51436129-f408e400-1cc1-11e9-8d6c-ddd772736108.PNG" width="600">
 
+The code is showing as below:
 ```
 # Define a function, search() that returns a list
 # in the form of [optimal path length, row, col]. For
